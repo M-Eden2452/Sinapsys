@@ -105,7 +105,7 @@
     color: #fff;
   }
   .menu-arrow-down-icon {
-    background-image: url(/images/arrow-down-burger.svg);
+    background-image: url(../images/arrow-down-burger.svg);
   }
 }
 
@@ -216,7 +216,7 @@
           content: "";
           width: 20px;
           height: 20px;
-          background-image: url(/images/lang.svg);
+          background-image: url(../images/lang.svg);
           background-size: cover;
           position: absolute;
           top: 40%;
@@ -229,7 +229,7 @@
         }
         .arrow-down-icon {
           display: inline-block;
-          background-image: url(/app/images/arrow-down.svg);
+          background-image: url(../images/arrow-down.svg);
           background-size: cover ;
           position: absolute;
           width: 16px;
