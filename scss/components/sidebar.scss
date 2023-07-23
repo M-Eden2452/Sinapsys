@@ -1,0 +1,192 @@
+
+// ====== sidebar main page ================= 
+.sidebar {
+  margin-bottom: 50px;
+  
+    /* .sidebar__list */
+    &__list {
+  padding: 23px 31px 23px 31px;
+  border: 1px solid #CEDDE9;
+    }
+
+    /* .sidebar__item */
+&__item {
+  max-width: 131px;
+  &:not(:last-child) {
+    margin-bottom: 46px;
+    
+  }
+}
+
+    /* .sidebar__link */
+    &__link {
+  font-weight: 500;
+  line-height: 164.285714%; /* 23/14 */
+    }
+}
+
+// =============================================
+
+
+// ============= Sidebar - Accordion  ================
+.anavigation-sidebar__wrapper{
+    border: 1px solid #CEDDE9;
+    padding: 25px 31px 23px 31px;
+    max-width: 277px;
+  .accordion {
+    .accordion__item {
+      &:not(:last-child) {
+        margin-bottom: 46px;
+      }
+      .accordion__button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: var(--text-font-size);
+        color: var(--text-color);
+        line-height: 164.285714%; /* 23/14 */
+        font-weight: 500;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        cursor: pointer;
+        text-align: left;
+        max-width: 101px;
+  
+        &:after {
+          content: "";
+          display: block;
+          background-image: url("/images/arrow.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 16px;
+          height: 16px;
+          transition: transform 0.3s ease-in-out;
+          position: absolute;
+          top: 30%;
+          right: -59px;
+          transform: translateY(-50%);
+          transform: rotate(90deg);
+        }
+      }
+  
+      .accordion__content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+      }
+     
+      .accordion__item-link{
+        margin-bottom: 46px;
+        font-size: var(--text-font-size);
+        color: var(--text-color);
+        font-weight: 500;
+        max-width: 156px;
+        margin-left: 10px;
+        line-height: 164.285714%; /* 23/14 */
+        &:first-child {
+          margin-top: 46px;
+        }
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+      .accordion__item-link--last {
+        margin-bottom: 0;
+      }
+    }
+  
+    .accordion__item.rotage {
+      .accordion__button {
+        &:after {
+          transform: rotate(270deg);
+        }
+      }
+    }
+  }
+}
+
+
+// ============================
+
+.sidebar__container {
+  max-width: 227px;
+
+  .sidebar {
+
+    /* .sidebar__form */
+  
+    &__form {
+      padding: 30px;
+      border: 1px solid #CEDDE9;
+    }
+  
+    /* .sidebar__form-title */
+  
+    &__form-title {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 122.222222%; /* 22/18 */
+      max-width: 167px;
+      margin-bottom: 24px;
+    }
+    &__form-desc {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 141.666667%; /* 17/12 */
+      display: flex;
+      align-items: center;
+      color: #999999;
+      margin-bottom: 20px;
+    }
+  
+    /* .sidebar__name */
+    &__name,  &__phone {
+      border: 1px solid #CEDDE9;
+      border-radius: 12px;
+      display: flex;
+      background: var(--primary-color);
+      height: 61px;
+      padding-left: 30px;
+      outline: none;
+      color: var(--text-color);
+      width: 100%; 
+      flex-grow: 1;
+      font-size: 16px;
+      max-width: 160px;
+      &::placeholder {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 161.538462%; /* 21/13 */
+        letter-spacing: 0.6px;
+        color: rgba(190, 190, 190, 0.8);
+        display: flex;
+        align-items: center;
+        @media (max-width: 900px) {
+          font-size: 16px;
+        }
+      }
+    }
+    &__name {
+      margin-bottom: 20px;
+    } 
+    &__phone {
+      margin-bottom: 24px;
+    }
+  
+    input:focus::placeholder, textarea:focus::placeholder {
+      opacity: 0;
+    }
+   
+  }
+  
+}
+
+
+
+  
+
+

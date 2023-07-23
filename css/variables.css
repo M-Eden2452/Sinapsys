@@ -1,0 +1,296 @@
+
+:root {
+    /* bg-color */
+    --primary-color: #fff;
+    --secondary-color: #474747;
+    --tertiary-rate-bg-color: #F5F8FF;  
+
+    /* color  */
+    --text-color: #474747;
+    --secondary-text-color: #ffffff;
+    --third-rate-color: #ABABAB; 
+    /* Кнопки-ссылки */
+    --link-color: #6C96F9;
+    /* input:placeholder */
+    --placeholder-color: #ffffff;
+    /*  footer-link*/
+    --footer-link-color: #ffffff;
+
+    /* border-main */
+    --border-width: 3px;
+    --border-color: #6C96F9;
+    --border-radius: 8px;
+
+
+
+
+    /* font-size */
+    --tertiary-font-size: 16px;
+    --dry-text-font-size: 15px; 
+   
+    /* Кнопки-ссылки */
+    --link-font-size: 16px;
+
+    /* input:placeholder */
+    --placeholder-font-size: 16px;
+    /* input:placeholder - font-weight */
+    --placeholder-font-weight: 500;
+
+
+
+
+
+
+
+
+    --containerWidth: 1440px;
+
+    /* hover */
+    --hover-text-color: #6C96F9;
+     
+    /* hover-background-button */
+    --hover-bg-button-color: #6C96F9;
+     
+
+
+  /* ================================================================ */
+    --swiper-pagination-bottom: auto;
+    --swiper-pagination-top: auto;
+    --swiper-pagination-left: auto;
+    --swiper-pagination-width: auto;
+  }
+  
+
+/* ========================= Fonts ======================================= */
+:root {
+  --font-family-Montserrat: 'Montserrat', sans-serif;
+
+}
+/* ========= body ================= */
+@media (min-width: 768px) {
+  :root {
+     --text-font-size: 14px; 
+  }
+}
+@media (max-width: 768px) {
+  :root {
+     --text-font-size: 13px; 
+  }
+}
+@media (max-width: 500px) {
+  :root {
+     --text-font-size: 12px; 
+  }
+}
+
+/* ============== H1 ==================== */
+@media (min-width: 1025px) {
+  :root {
+    --h1-font-size: 36px; 
+  }
+}
+@media (max-width: 1024px) {
+  :root {
+    --h1-font-size: 28px; 
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --h1-font-size: 24px; 
+  }
+}
+@media (max-width: 500px) {
+  :root {
+    --h1-font-size: 18px; 
+  }
+}
+@media (max-width: 400px) {
+  :root {
+    --h1-font-size: 14px; 
+  }
+}
+/* ============================================ */
+
+/* ============== H2 Главная ==================== */
+@media (min-width: 1025px) {
+  :root {
+    --h2-main-font-size: 36px; 
+  }
+}
+@media (max-width: 1024px) {
+  :root {
+    --h2-main-font-size: 28px; 
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --h2-main-font-size: 24px; 
+  }
+}
+@media (max-width: 500px) {
+  :root {
+    --h2-main-font-size: 18px; 
+  }
+}
+@media (max-width: 400px) {
+  :root {
+    --h2-main-font-size: 14px; 
+  }
+}
+/* ============================================ *
+
+/* ============== H2 ==================== */
+@media (min-width: 1025px) {
+  :root {
+    --h2-font-size: 32px; 
+  }
+}
+@media (max-width: 1024px) {
+  :root {
+    --h2-font-size: 30px; 
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --h2-font-size: 28px; 
+  }
+}
+@media (max-width: 500px) {
+  :root {
+    --h2-font-size: 24px; 
+  }
+}
+@media (max-width: 400px) {
+  :root {
+    --h2-font-size: 20px; 
+  }
+}
+/* ============================================ */
+
+/* ============== H3 ==================== */
+@media (min-width: 1025px) {
+  :root {
+    --h3-font-size: 24px; 
+  }
+}
+@media (max-width: 1024px) {
+  :root {
+    --h3-font-size: 22px; 
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --h3-font-size: 20px; 
+  }
+}
+@media (max-width: 500px) {
+  :root {
+    --h3-font-size: 18px; 
+  }
+}
+@media (max-width: 400px) {
+  :root {
+    --h3-font-size: 16px; 
+  }
+}
+/* ============================================ */
+
+/* ============== Subtitle ==================== */
+
+@media (min-width: 1025px) {
+  :root {
+    --subtitle-font-size: 20px; 
+  }
+}
+@media (max-width: 1024px) {
+  :root {
+    --subtitle-font-size: 18px; 
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --subtitle-font-size: 16px; 
+  }
+}
+@media (max-width: 500px) {
+  :root {
+    --subtitle-font-size: 14px; 
+  }
+}
+@media (max-width: 400px) {
+  :root {
+    --subtitle-font-size: 12px; 
+  }
+}
+
+/* ========= Card-title ===================== */
+@media (min-width: 1339px) {
+  :root {
+    --card-title-font-size: 24px; 
+  }
+}
+@media (max-width: 1339px) {
+  :root {
+    --card-title-font-size: 20px; 
+  }
+}
+@media (max-width: 1024px) {
+  :root {
+    --card-title-font-size: 20px; 
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --card-title-font-size: 16px; 
+  }
+}
+@media (max-width: 500px) {
+  :root {
+    --card-title-font-size: 16px; 
+  }
+}
+@media (max-width: 400px) {
+  :root {
+    --card-title-font-size: 14px; 
+  }
+}
+/* ============================================ */
+
+
+
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+         url('../fonts/montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+         url('../fonts/montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+         url('../fonts/montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+         url('../fonts/montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+         url('../fonts/montserrat-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+  }

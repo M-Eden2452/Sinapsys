@@ -1,0 +1,230 @@
+// ============================About===========================
+
+
+.about__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+    margin-top: 26px;
+  }
+
+  .about-content {
+  
+          /* .about-content__container */
+  
+          &__container {
+        max-width: 873px;
+          }
+  }
+  .about {
+  
+          /* .about__content */
+  
+          &__content {
+          }
+  
+          /* .about__title */
+          &__title {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 121.875%; /* 39/32 */
+        color: var(--text-color);
+        text-transform:none;
+        margin-bottom: 30px;
+  
+          }
+  
+          /* .about__description */
+          &__description {
+        margin-bottom: 18px;
+        font-size: var(--dry-text-font-size);
+        line-height: 173.333333%; /* 26/15 */
+          }
+  }
+  .mission {
+  
+          /* .mission__wrapper */
+          &__wrapper {
+          }
+  
+          /* .mission__subscribe */
+          &__subscribe {
+        font-weight: 500;
+        font-size: var(--h3-font-size);
+        line-height: 108.333333%; /* 26/24 */
+        color: var(--text-color);
+        margin-bottom: 16px;
+          }
+  
+          /* .mission__list */
+          &__list {
+        margin-bottom: 16px;
+          }
+  
+          /* .mission__text */
+          &__text {
+        font-size: var(--dry-text-font-size);
+        line-height: 173.333333%; /* 26/15 */
+        color: var(--text-color);
+        margin-bottom: 24px;
+          }
+  
+          /* .mission__information */
+  
+          &__information {
+        background-color: var(--third-rate-bg-color);
+        padding: 50px 23px 48px 42px;
+        display: flex;
+        gap: 96px;
+        margin-bottom: 24px;
+          }
+  }
+  .mission-item {
+  
+          /* .mission-item__list */
+          &__list {
+        font-size: var(--dry-text-font-size);
+        line-height: 173.333333%; /* 26/15 */
+        color: var(--text-color);
+        margin-bottom: 8px;
+        & span {
+          margin-right: 8px;
+        }
+          }
+  }
+
+  .mission-info {
+          /* .mission-info__card */
+          &__card {
+        max-width: 187px;
+          }
+  
+          /* .mission-info__title */
+          &__title {
+        font-weight: 600;
+        font-size: var(--nav-font-size);
+        line-height: 162.5%; /* 26/16 */
+        margin-bottom: 12.5px;
+          }
+  
+          /* .mission-info__description */
+          &__description {
+        font-size: var(--dry-text-font-size);
+        line-height: 173.333333%; /* 26/15 */
+        color: var(--text-color);
+          }
+  }
+
+
+  .about-benefits {
+          /* .about-benefits__wrapper */
+  
+          &__wrapper {
+  
+          }
+  
+          /* .about-benefits__title */
+          &__title {
+        font-weight: 500;
+        font-size: var(--h3-font-size);
+        line-height: 108.333333%; /* 26/24 */
+        color: var(--text-color);
+        margin-bottom: 24px;
+          }
+  
+          /* .about-benefits__inner */
+          &__inner {
+      background-color: var(--third-rate-bg-color);
+      padding: 50px;
+      display: flex;
+      gap: 26px;
+      margin-bottom: 24px;
+          }
+  
+          /* .about-benefits__card */
+          &__card {
+        max-width: 240px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+          }
+  
+          /* .about-benefits__card-ing */
+          &__card-img {
+        margin-bottom: 15px;
+        height: 88px;
+        width: auto;
+          }
+  
+          /* .about-benefits__card-title */
+          &__card-title {
+        font-weight: 600;
+        font-size: var(--nav-font-size);
+        line-height: 162.5%; /* 26/16 */
+        margin-bottom: 12px;
+          }
+  
+          /* .about-benefits__card-description */
+          &__card-description {
+        flex-grow: 1;
+          }
+  }
+
+  
+  .certificates {
+    padding-bottom: 50px;
+          /* .certificates__wrapper */
+          &__wrapper {
+          }
+  
+          /* .certificates__title */
+          &__title {
+        margin-bottom: 12px;
+          }
+  }
+  
+  .AboutSwiper {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;  
+  
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+      bottom: var(--swiper-pagination-bottom);
+      top: var(--swiper-pagination-top);
+      left: 50%;
+      width: var(--swiper-pagination-width);
+      transform: translateX(-50%);
+  }
+  
+    .swiper-pagination-bullet {
+      background: #EDF2FF;
+      border-radius: 50px;
+      height: 10px;
+      width: 25px;
+      opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+      background: #6C96F9;
+    }
+  }
+  .certificates__wrapper {
+  
+  }
+  .slide-certificate {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slide-certificate img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-pagination {
+  }
+  
+  
