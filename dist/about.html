@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#35363a">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>О компании</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <title></title>
+</head>
+
+<body>
+<!-- ==============Header==========--> 
+
+
+
+<header class="header">
+        <div class="header__container _container">
+            <div class="logo__inner">
+                <a href="\"><img src="/images/logo.svg" alt="SYNAPSYS logotype"></a>
+            </div>
+            <div class="menu__inner">
+                <div class="header__menu menu">
+                    <div class="menu__icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <nav class="menu__body">
+                        <ul class="menu__list">
+                            <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+                            <li class="nav__item"><a href="about.html" class="nav__link">О компании</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Новости</a></li>
+                            <ul class="menu__list-down">
+                                <li class=" nav__item-down"><a href="#" class="nav__link-down nav__link">Облачные сервисы</a></li>
+                                <li class=" nav__item-down"><a href="#" class="nav__link-down nav__link">Продукты</a></li>
+                                <li class=" nav__item-down"><a href="#" class="nav__link-down nav__link">Услуги</a></li>
+                            </ul>
+                           
+                        </ul>
+                    
+                    </nav>
+                </div>
+                
+                <div class="header__language-toggle">
+                    <button id="submitButton" class="header__button button">Подать заявку</button>
+                    <div class="language-selector">
+                        <div class="selected-language">
+                          <span class="selected-language-text">Рус</span>
+                          <i class="arrow-down-icon"></i>
+                        </div>
+                        <ul class="language-options">
+                          <li><a href="#">Eng</a></li>
+                        </ul>
+                      </div>
+                  </div>
+
+            </div>
+
+
+            </div>
+        </div>
+        <div class="header-down__container _container">
+            <ul class="nav__list-down">
+                <li class=" nav__item-down"><a href="cloud_services.html" class="nav__link-down nav__link">Облачные сервисы</a></li>
+                <li class=" nav__item-down"><a href="#" class="nav__link-down nav__link">Продукты</a></li>
+                <li class=" nav__item-down"><a href="#" class="nav__link-down nav__link">Услуги</a></li>
+            </ul>
+        </div>
+    </header>
+<!-- ===================Header-end======================== --> 
+
+<!-- ======================Modal============== --> 
+<div class="modal-overlay" id="modalOverlay" >
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close__modal" id="closeModal">&times;</span>
+      <h3 class="modal__title">Подать заявку</h3>
+      <form class="modal__form" id="order-form" action="sendmail.php" method="post">
+        <label bel for="name">Ваше имя:</label>
+        <input  class="modal__name" type="text" id="name" name="name" required>
+        
+        <label for="phone">Телефон </label>
+        <input class="modal__phone" type="phone" id="phone" name="phone" required>
+  
+  
+        <label for="email">Email</label>
+        <input  class="modal__email" type="email" id="email" name="email" >
+  
+        <label for="message">Сообщение:</label>
+        <textarea  class="modal__message" id="message" name="message" ></textarea>
+        
+        <div class="modal__checkbox-wrapper">
+        <input class="modal__checkbox checkbox" type="checkbox" id="consent" name="consent">
+        <label class="modal__checkbox-label" for="consent">Отправляя данную форму, даю TOO «Sinapsys» согласие на обработку моих персональных данных</label>
+        </div>
+
+        <button type="submit" class="button submit-btn" id="ModalsubmitButton">Отправить</button>
+      </form>
+    </div>
+  </div>
+</div>  
+<!-- ===============Modal-end=========== --> 
+
+ <!-- ===========Success-Modal-end============= -->  
+<div class="success-modal-overlay" id="success-modalOverlay" >
+    <div class="success-modal" id="thankYouModal">
+        <img class="success-img" src="/images/success.svg" alt="Ваша заявка успешно отправлена">
+        <div class="success__modal-content">
+        <h3 class="success__title">Ваша заявка успешно отправлена</h3>
+        <p class="success__description">В ближайшее время с вами свяжется наш менеджер для уточнения необходимой информации.</p>
+        <button id="successModalClose" class="success__close-btn button button-primary"> Закрыть</button>
+        </div>
+    </div>
+</div>
+  <!-- ========Success-Modal-end============ -->  
+
+
+  <!-- ==============Cookie======== -->
+    <div class="cookie-notification__container _container">
+        <div id="cookie-notification" class="cookie-notification">
+            <h3 class="cookie-notification__title">Можем ли мы хранить файлы cookie?</h3>
+            <p class="cookie-notification__description">Мы используем файлы cookie для предоставления наших услуг, а также для анализа и маркетинга. Чтобы узнать больше о нашем использовании файлов a cookie, знакомьтесь с нашей политикой конфиденциальности. Продолжая просматривать наш веб-сайт, вы соглашаетесь на использование наши cookies и на наши правила и условия.</p>
+            <div class="cookie-notification__wrapper--button">
+                <button id="cookie-notice-close" class="button button__reject">Отклонить</button>
+                <button id="cookie-accept" class="button button__accept button-primary">Принимаю</button>
+            </div>
+        </div>          
+    </div>
+    
+  <!-- ================Cookie-end====== -->
+
+
+    <div class="main__bg">
+        <div class="main__container _container decor-left decor-right">
+
+            <div class="slider__wrapper">
+                <div class="swiper MainSwiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                            <div class="swiper-slide slide-card" > 
+                                
+                                <div class="main__content">
+                                    <h1 class="main__title _anim-show _anim-items">Облачные сервисы</h1>
+                                    <div class="main__description _anim-items _anim-show">Облачные сервисы - это услуга позволяют пользователям получать доступ к ресурсам через интернет из любой точки мира, без необходимости установки и обслуживания собственной инфраструктуры.
+                                    </div>
+                                </div>
+                            </div>    
+        
+                            <div class="swiper-slide slide-card" > 
+                              
+                                <div class="main__content">
+                                    <h1 class="main__title ">Облачные сервисы</h1>
+                                    <div class="main__description">Облачные сервисы - это услуга позволяют пользователям получать доступ к ресурсам через интернет из любой точки мира, без необходимости установки и обслуживания собственной инфраструктуры.
+                                    </div>
+                                </div>
+                            </div>    
+        
+                            <div class="swiper-slide slide-card" > 
+                                
+                                <div class="main__content">
+                                    <h1 class="main__title ">Облачные сервисы</h1>
+                                    <div class="main__description">Облачные сервисы - это услуга позволяют пользователям получать доступ к ресурсам через интернет из любой точки мира, без необходимости установки и обслуживания собственной инфраструктуры.
+                                    </div>
+                                </div>
+                            </div>   
+                  </div>
+                </div>
+                <div class="swiper-pagination main-slider__pagination"></div> 
+            </div>
+    
+            <div class="main__img">
+                <picture>
+                    <source srcset='images/main/illustration.png'  type='image/webp'>
+                    <img src='images/main/illustration.webp' alt=''>
+                </picture>
+            </div>
+        </div>    
+    
+    </div>
+    <div class="breadcrumbs">
+        <a href="/">Главная</a> 
+        <span class="separator">/</span> 
+        <span class="current-page">Страница</span>
+     </div>
+     
+     <!-- ========================== -->
+
+    <div class="about__container common__container _container">    
+        <nav class="sidebar">
+            <div class="about-sidebar__wrapper sidebar-wrapper">
+                <ul class="about-sidebar__list sidebar__list">
+                    <li class="about-sidebar__item sidebar__item">
+                        <a href="#" class="about-sidebar__link sidebar__link">О компании</a>
+                    </li>
+                    <li class="about-sidebar__item sidebar__item">
+                        <a href="cloud_services.html" class="about-sidebar__link sidebar__link">Нормативные документы</a>
+                    </li>
+                    <li class="about-sidebar__item sidebar__item">
+                        <a href="#" class="about-sidebar__link sidebar__link">Новости</a>
+                    </li>
+                    <li class="about-sidebar__item sidebar__item">
+                        <a href="#" class="about-sidebar__link sidebar__link">Вакансии</a>
+                    </li>
+                    <li class="about-sidebar__item sidebar__item">
+                        <a href="#" class="about-sidebar__link sidebar__link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div  class=" about-content__container">
+            <section id="slide1" class="about__content slide">
+                <h2 class="about__title">О компании</h2>
+                <div class="about__description">Sinapsys – поставщик IT-решений и сервисов, работающий на рынках Восточной Европы, Америки и Азии. Мы помогаем нашим заказчикам осуществить цифровую трансформацию бизнеса и защитить его от угроз средствами кибербезопасности. Мы предлагаем комплексные технологические решения, облака, программное и аппаратное обеспечение и широкий спектр IT-услуг.</div>
+            </section>
+
+            <section id="slide2" class=" mission__wrapper slide">
+                <h3 class="mission__subscribe">Наша миссия и стратегия</h3>
+                <ul class="mission__list">
+                    <li class="mission-item__list"><span>•</span> Мы создаем уникальные и сложные IT-системы с высокой интеллектуальной составляющей.</li>
+                    <li class="mission-item__list"><span>•</span> Сотни проектов каждый год по разным технологиям: от дата-центра до техподдержки.</li>
+                    <li class="mission-item__list"><span>•</span> Интегрируем решения разных вендоров и отвечаем за работоспособность комплексного решения.</li>
+                </ul>
+                <div class="mission__text">
+                    Для того чтобы компания функционировала максимально эффективно и при этом динамично развивалась, мы формируем и сохраняем оптимальный кадровый состав. В каждом департаменте работают профессионалы, которые умеют и любят решать любые задачи, в том числе сложные или нетривиальные, – ведь это интересно!
+                </div>
+                <div class="mission__information">
+                    <div class="mission-info__card">
+                        <div class="mission-info__title">Основана в 2009 году</div>
+                        <div class="mission-info__description">13 лет на рынке облачных услуг для корпоративных клиентов</div>
+                    </div>
+                    <div class="mission-info__card">
+                        <div class="mission-info__title">Аттестаты</div>
+                        <div class="mission-info__description">Инфраструктура позволяет размещать персональные данные по ФЗ-152 и ГИС</div>
+                    </div>
+                    <div class="mission-info__card">
+                        <div class="mission-info__title">4 дата центра</div>
+                        <div class="mission-info__description">Дата центры в России, Германии, Нидерландах</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="slide3" class=" about-benefits__wrapper slide">
+                <h3 class="about-benefits__title">Наши приемущества:</h3>
+                <div class="about-benefits__inner">
+                    <div class="about-benefits__card">
+                        <div class="about-benefits__card-img"><img src="/app/images/about/about-benefits-item-1.svg" alt=""></div>
+                        <div class="about-benefits__card-title">Сервисы «под ключ»</div>
+                        <div class="about-benefits__card-description">Даем финансовую гарантию бесперебойной работы сервиса на 99,95%. Вы можете быть уверены в том, что вы всегда сможете отправить письмом получить важные документы</div>
+                    </div>
+                    <div class="about-benefits__card">
+                        <div class="about-benefits__card-img"><img src="/app/images/about/about-benefits-item-2.svg" alt=""></div>
+                        <div class="about-benefits__card-title">Проверенные технологии</div>
+                        <div class="about-benefits__card-description">Мы регулярно обновляет сервисы, поэтому вы всегда будете использовать последнюю версию программного обеспечения и обновлений безопасности</div>
+                    </div>
+                    <div class="about-benefits__card">
+                        <div class="about-benefits__card-img"><img src="/app/images/about/about-benefits-item-3.svg" alt=""></div>
+                        <div class="about-benefits__card-title">Гарантия доступности</div>
+                        <div class="about-benefits__card-description">Наши сервисы доступны на телефоне, планшете и компьютере. Отправляйте письма, назначайте встречи, общайтесь с коллегами в любом месте без ограничения функций сервиса. Будьте на связи, когда вам придет важное письмо.</div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="slide4" class=" certificates__wrapper slide">
+                <h3 class="certificates__title">Лицензии и сертификаты</h3>
+
+                <div class="swiper AboutSwiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper certificates__wrapper">
+                        <div class="swiper-slide slide-certificate">
+                            <picture>
+                                <source srcset='/images/about/certificates-1.webp' type='image/webp'>
+                                <img src='/images/about/certificates-1.png' alt=''>
+                            </picture> 
+                        </div>
+
+                        <div class="swiper-slide slide-certificate">
+                            <picture>
+                                <source srcset='/images/about/certificates-2.webp' type='image/webp'>
+                                <img src='/images/about/certificates-2.png' alt=''>
+                            </picture> 
+                        </div>
+                                
+                        <div class="swiper-slide slide-certificate">
+                            <picture>
+                                <source srcset='/images/about/certificates-3.webp' type='image/webp'>
+                                <img src='/images/about/certificates-3.png' alt=''>
+                            </picture> 
+                        </div>
+                        <div class="swiper-slide slide-certificate">
+                            <picture>
+                                <source srcset='/images/about/certificates-3.webp' type='image/webp'>
+                                <img src='/images/about/certificates-3.png' alt=''>
+                            </picture> 
+                        </div>
+                        <div class="swiper-slide slide-certificate">
+                            <picture>
+                                <source srcset='/images/about/certificates-3.webp' type='image/webp'>
+                                <img src='/images/about/certificates-3.png' alt=''>
+                            </picture> 
+                        </div>
+                        <div class="swiper-slide slide-certificate">
+                            <picture>
+                                <source srcset='/images/about/certificates-3.webp' type='image/webp'>
+                                <img src='/images/about/certificates-3.png' alt=''>
+                            </picture> 
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div> 
+                </div>
+            </div>
+    </div>
+        <div class="navigation">
+            <ul class="navigation__wrapper">
+                <li class="navigation__item"><a href="#slide1" class="navigation__link">об услуге <span class="navigation__element"></span></a></li>
+                <li class="navigation__item"><a href="#slide2" class="navigation__link">миссия и стратегия <span class="navigation__element"></span></a></li>
+                <li class="navigation__item"><a href="#slide3" class="navigation__link">приемущества <span class="navigation__element"></span></a></li>
+                <li class="navigation__item"><a href="#slide4" class="navigation__link">лицензии и сертификаты<span class="navigation__element"></span></a></li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="/js/main.min.js" ></script>
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" 
+        integrity="sha512-HaoDYc3PGduguBWOSToNc0AWGHBi2Y432Ssp3wNIdlOzrunCtB2qq6FrhtPbo+PlbvRbyi86dr5VQx61eg/daQ==" crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+    </script>
+</body>
+</html>
