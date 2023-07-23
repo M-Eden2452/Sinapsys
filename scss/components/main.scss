@@ -17,7 +17,7 @@
   }
   .decor-left::before {
     content:"";
-    background-image: url(/images/decor-right.png);
+    background-image: url(../images/decor-right.png);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -42,7 +42,7 @@
   }
   .decor-right::after {
     content:"";
-    background-image: url(/images/decor-left.png);
+    background-image: url(../images/decor-left.png);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
